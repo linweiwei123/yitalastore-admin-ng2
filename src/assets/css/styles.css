@@ -1,0 +1,9 @@
+/* Master Styles */
+@import "bootstrap.min.css";
+@import "core.css";
+@import "components.css";
+@import "icons.css";
+@import "pages.css";
+@import "menu.css";
+@import "responsive.css";
+@import "yitala-store.css";

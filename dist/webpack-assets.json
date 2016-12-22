@@ -1,0 +1,12 @@
+{
+  "app": {
+    "js": "scripts/app.bundle.js",
+    "css": "app.css"
+  },
+  "polyfills": {
+    "js": "scripts/polyfills.bundle.js"
+  },
+  "vendor": {
+    "js": "scripts/vendor.bundle.js"
+  }
+}
