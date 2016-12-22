@@ -13,10 +13,9 @@ File: Menu
 }
 .topbar .topbar-left {
   background: #ffffff;
-  border-top: 3px solid #71b6f9;
   float: left;
   text-align: center;
-  height: 73px;
+  height: 70px;
   position: relative;
   width: 250px;
   z-index: 1;
@@ -28,7 +27,6 @@ File: Menu
   background-color: #ffffff;
   border-radius: 0px;
   border: none;
-  border-top: 3px solid #71b6f9;
   margin-bottom: 0px;
   padding: 0px 20px;
   box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
@@ -184,9 +182,11 @@ File: Menu
   }
 }
 .side-menu {
-  top: 70px;
+  top: 0px;
+  padding-top: 70px;
   width: 250px;
   z-index: 10;
+  overflow-y: auto;
   background: #2f353f;
   bottom: 50px;
   height: 100%;

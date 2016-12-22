@@ -6,17 +6,20 @@ import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {HeaderComponent} from "./layout/header/header.component";
+import {SidebarComponent} from "./layout/sidebar/sidebar.component";
 @NgModule({
     imports:[
         CommonModule,
         FormsModule
     ],
     declarations:[
-        HeaderComponent
+        HeaderComponent,
+        SidebarComponent
     ],
     providers:[],
     exports:[
-        HeaderComponent
+        HeaderComponent,
+        SidebarComponent
     ]
 })
 
