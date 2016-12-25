@@ -120,8 +120,9 @@ module.exports = {
          */
         new HtmlWebpackPlugin({
             template: 'src/index.html',
+            favicon:'src/assets/images/favicon.png',
             chunksSortMode: 'dependency',
-            inject: 'head'
+            inject: 'body'
         }),
 
         /*
@@ -131,9 +132,9 @@ module.exports = {
          *
          * See: https://github.com/numical/script-ext-html-webpack-plugin
          */
-        new ScriptExtHtmlWebpackPlugin({
-            defaultAttribute: 'defer'
-        })
+        // new ScriptExtHtmlWebpackPlugin({
+        //     defaultAttribute: 'defer'
+        // })
 
     ],
 

@@ -7,6 +7,7 @@ import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {HeaderComponent} from "./layout/header/header.component";
 import {SidebarComponent} from "./layout/sidebar/sidebar.component";
+import {MessageComponent} from "./common/message/message.component";
 @NgModule({
     imports:[
         CommonModule,
@@ -14,12 +15,13 @@ import {SidebarComponent} from "./layout/sidebar/sidebar.component";
     ],
     declarations:[
         HeaderComponent,
-        SidebarComponent
+        MessageComponent
     ],
     providers:[],
     exports:[
         HeaderComponent,
-        SidebarComponent
+        MessageComponent,
+        FormsModule
     ]
 })
 

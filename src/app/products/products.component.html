@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card-box">
+            <h4>商品列表的JSON（获取原始数据，不转化为Observable对象）</h4>
+            <div class="yitala-loading" *ngIf="!productsJson">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p>{{productsJson | json}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card-box">
+            <h4 class="">{{ (storeowner | async)?.name }}</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>商品编号</th>
+                        <th>商品名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products | async;let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{product.$key}}</td>
+                        <td>{{product.product}}</td>
+                        <td><a href="javascript:;" class="text-danger" (click)="deleteProduct(product)"><i class="fa fa-remove" aria-hidden="true"></i>删除</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="yitala-loading" *ngIf="!productsJson">
+                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card-box">
+            <input type="text" [(ngModel)]="newproduct" placeholder="请输入新增商品名称..." name="newproduct" #product required>
+            <button type="button" class="btn btn-primary" (click)="add()" [disabled]="product.invalid">新增</button>
+            <br/>
+            <br/>
+            <input type="text" #newStoreOwner placeholder="请输入新店名..." >
+            <button type="button" class="btn btn-primary"  (click)="update(newStoreOwner.value)">更新店名</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-danger" (click)="delete()">删除所有产品</button>
+
+        </div>
+    </div>
+</div>
+
+<template ngbModalContainer></template>

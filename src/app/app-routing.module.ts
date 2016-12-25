@@ -2,14 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router';
 
 import {DashboardComponent} from "./dashboard/dashboard.component";
-import {LoginComponent} from "./login/login.component";
-import {NeedAuthGuard} from "./login/no-auth-guard.service";
+import {ProductsComponent} from "./products/products.component";
+import {UploadComponent} from "./upload/upload.component";
+
 
 
 const appRoutes: Routes = [
 
 
-    {   path: 'dashboard', component: DashboardComponent},
+    {   path: 'dashboard', component: DashboardComponent,data:{name:'dashboard'}},
+    {
+        path:'products',component:ProductsComponent,data:{name:'商品列表'}
+    },
+    {
+        path:'upload',component:UploadComponent,data:{name:'上传图片'}
+    },
     {
         path: '',
         redirectTo: '/dashboard',
