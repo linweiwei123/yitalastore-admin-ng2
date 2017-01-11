@@ -4,14 +4,15 @@
 
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HeaderComponent} from "./layout/header/header.component";
-import {SidebarComponent} from "./layout/sidebar/sidebar.component";
 import {MessageComponent} from "./common/message/message.component";
+
 @NgModule({
     imports:[
         CommonModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations:[
         HeaderComponent,
@@ -21,7 +22,8 @@ import {MessageComponent} from "./common/message/message.component";
     exports:[
         HeaderComponent,
         MessageComponent,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ]
 })
 

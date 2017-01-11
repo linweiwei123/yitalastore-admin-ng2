@@ -4,6 +4,7 @@ import { RouterModule,Routes } from '@angular/router';
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {ProductsComponent} from "./products/products.component";
 import {UploadComponent} from "./upload/upload.component";
+import {FormComponent} from "./form/form.component";
 
 
 
@@ -16,6 +17,9 @@ const appRoutes: Routes = [
     },
     {
         path:'upload',component:UploadComponent,data:{name:'上传图片'}
+    },
+    {
+        path:'form',component:FormComponent,data:{name:'form'}
     },
     {
         path: '',

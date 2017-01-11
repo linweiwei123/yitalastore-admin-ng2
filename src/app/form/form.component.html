@@ -1,0 +1,171 @@
+<div class="row">
+
+    <div class="col-lg-6">
+        <div class="card-box">
+
+            <h4 class="header-title m-t-0 m-b-30">Input Sizes</h4>
+
+            <form role="form" class="form-horizontal" #form="ngForm" (ngSubmit)="logForm(form.value)">
+                <div ngModelGroup="product-basic">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="name">name</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="name" name="name" ngModel class="form-control input-sm" placeholder="请输入...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="ProductID">ProductID</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="ProductID" name="ProductID" ngModel class="form-control" placeholder="请输入...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="type">type</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="type" name="type" ngModel class="form-control" placeholder="请输入...">
+                        </div>
+                    </div>
+                </div>
+                <div ngModelGroup="product-properties">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">price</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="price" ngModel placeholder="请输入...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">description</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="description" ngModel placeholder="请输入...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group m-b-0">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-info waves-effect waves-light">提交</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div><!-- end col -->
+
+
+    <div class="col-lg-6">
+        <div class="card-box">
+
+            <h4 class="header-title m-t-0 m-b-30">Input States</h4>
+
+            <form class="form-horizontal" >
+                <div class="form-group has-success">
+                    <label class="col-md-3 control-label" for="firstName">firstName</label>
+                    <div class="col-md-6">
+                        <input type="text" name="firstName"  ngModel class="form-control" placeholder="...">
+                    </div>
+                </div>
+                <div class="form-group has-warning">
+                    <label class="col-md-3 control-label" for="lastName">lastName</label>
+                    <div class="col-md-6">
+                        <input type="text"  name="lastName" ngModel class="form-control" placeholder="...">
+                    </div>
+                </div>
+                <div class="form-group has-error">
+                    <label class="col-md-3 control-label" for="state-danger">Danger</label>
+                    <div class="col-md-6">
+                        <input type="text" id="state-danger" name="state-danger" class="form-control" placeholder="...">
+                    </div>
+                </div>
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-3 control-label">Input with success </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control">
+                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label class="col-sm-3 control-label">Input with warning </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control inputmask">
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                    </div>
+                </div>
+
+                <div class="form-group has-error has-feedback">
+                    <label class="col-sm-3 control-label">Input with error </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control inputmask">
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="col-sm-3 control-label">Custom Icons</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" placeholder="Custom icons">
+                        <i class="fa fa-envelope form-control-feedback l-h-34"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div><!-- end col -->
+
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-lg-6">
+        <div class="card-box">
+
+            <h4 class="header-title m-t-0 m-b-30">Input Sizes</h4>
+
+            <form role="form" class="form-horizontal" [formGroup]="customerForm" (ngSubmit)="onSubmit(customerForm.value)" >
+                <div >
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="firstname">fistname</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="firstname" name="firstname" [formControl]="customerForm.controls['firstname']" class="form-control input-sm" placeholder="请输入...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="lastname">lastname</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="lastname" name="lastname" [formControl]="customerForm.controls['lastname']"  class="form-control" placeholder="请输入...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="address">address</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="address" name="address" [formControl]="customerForm.controls['address']" class="form-control" placeholder="请输入...">
+                        </div>
+                    </div>
+                </div>
+                <div >
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">city</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="city" [formControl]="customerForm.controls['city']"  placeholder="请输入...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">zip</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="zip" [formControl]="customerForm.controls['zip']" placeholder="请输入...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group m-b-0">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-info waves-effect waves-light">提交</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div><!-- end col -->
+
+
+
+</div>

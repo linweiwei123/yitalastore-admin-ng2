@@ -14,6 +14,7 @@ import {AngularFireModule} from "angularfire2";
 import {ProductsComponent} from "./products/products.component";
 import {SidebarComponent} from "./share/layout/sidebar/sidebar.component";
 import {UploadComponent} from "./upload/upload.component";
+import {FormComponent} from "./form/form.component";
 
 //firebase的配置
 export const firebaseConfig = {
@@ -38,7 +39,8 @@ export const firebaseConfig = {
         DashboardComponent,
         SidebarComponent,
         ProductsComponent,
-        UploadComponent
+        UploadComponent,
+        FormComponent
     ],
     providers:[],
     entryComponents: [MessageComponent],

@@ -16,13 +16,13 @@ File: Menu
   background: #ffffff;
   float: left;
   text-align: center;
-  height: 70px;
+  height: 60px;
   position: relative;
-  width: 250px;
+  width: 240px;
   z-index: 1;
 }
 .topbar .topbar-left .logo {
-  line-height: 70px;
+  line-height: 60px;
 }
 .navbar-default {
   background-color: #ffffff;
@@ -185,7 +185,7 @@ File: Menu
 .side-menu {
   top: 0px;
   padding-top: 70px;
-  width: 250px;
+  width: 240px;
   z-index: 10;
   overflow-y: auto;
   background: #2f353f;
@@ -201,7 +201,7 @@ File: Menu
   background-color: rgba(113, 182, 249, 0.4);
 }
 .content-page {
-  margin-left: 250px;
+  margin-left: 240px;
   overflow: hidden;
 }
 .content-page .content {
@@ -622,7 +622,7 @@ File: Menu
   font-weight: 600;
   padding-left: 20px;
   padding-right: 40px;
-  margin-top: 18px;
+  margin-top: 13px;
   margin-left: 20px;
   background: rgba(152, 166, 173, 0.1);
   box-shadow: none;
